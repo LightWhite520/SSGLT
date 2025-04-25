@@ -23,25 +23,18 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SSGLTTheme {
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-////                    Greeting(
-////                        name = "Android",
-////                        modifier = Modifier.padding(innerPadding)
-////                    )
-//
-//                }
                 AndroidWebView(url = "http://150.138.77.132:45455")
             }
         }
     }
-    // 在 Activity 或 Fragment 中使用
+
     @Composable
     fun AndroidWebView(url: String) {
         AndroidView(
             factory = { ctx ->
                 WebView(ctx).apply {
-                    settings.javaScriptEnabled = true // 启用 JavaScript
-                    webViewClient = WebViewClient() // 处理页面导航
+                    settings.javaScriptEnabled = true
+                    webViewClient = WebViewClient()
                     loadUrl(url)
                 }
             },
