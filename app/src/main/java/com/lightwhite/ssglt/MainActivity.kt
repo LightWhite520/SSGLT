@@ -8,15 +8,10 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.lightwhite.ssglt.ui.theme.SSGLTTheme
 
@@ -27,13 +22,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             SSGLTTheme {
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize()
                 ) {
                     Scaffold {
                         AndroidWebView(
                             url = "http://150.138.77.132:45455",
-                            modifier = Modifier.padding(it)
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(it)
                         )
                     }
                 }
@@ -47,6 +43,7 @@ class MainActivity : ComponentActivity() {
             factory = { ctx ->
                 WebView(ctx).apply {
                     settings.javaScriptEnabled = true
+                    settings.domStorageEnabled = true
                     webViewClient = WebViewClient()
                     loadUrl(url)
                 }
