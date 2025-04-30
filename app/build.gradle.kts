@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.lightwhite.ssglt"
+    namespace = "com.lightwhite.paper"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.lightwhite.ssglt"
+        applicationId = "com.lightwhite.paper"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

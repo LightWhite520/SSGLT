@@ -1,4 +1,4 @@
-package com.lightwhite.ssglt
+package com.lightwhite.paper
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.lightwhite.ssglt", appContext.packageName)
+        assertEquals("com.lightwhite.paper", appContext.packageName)
     }
 }

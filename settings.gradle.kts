@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SSGLT"
+rootProject.name = "Paper"
 include(":app")
  

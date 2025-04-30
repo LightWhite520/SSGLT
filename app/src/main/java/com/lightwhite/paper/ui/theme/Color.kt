@@ -1,4 +1,4 @@
-package com.lightwhite.ssglt.ui.theme
+package com.lightwhite.paper.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

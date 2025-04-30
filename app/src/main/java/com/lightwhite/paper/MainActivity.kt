@@ -1,4 +1,4 @@
-package com.lightwhite.ssglt
+package com.lightwhite.paper
 
 import android.os.Bundle
 import android.webkit.WebView
@@ -18,14 +18,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
-import com.lightwhite.ssglt.ui.theme.SSGLTTheme
+import com.lightwhite.paper.ui.theme.PaperTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            SSGLTTheme {
+            PaperTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {

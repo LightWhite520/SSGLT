@@ -1,4 +1,4 @@
-package com.lightwhite.ssglt
+package com.lightwhite.paper
 
 import org.junit.Test
 
