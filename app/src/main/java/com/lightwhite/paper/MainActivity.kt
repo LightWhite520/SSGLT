@@ -21,6 +21,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import com.lightwhite.paper.ui.theme.PaperTheme
 
 class MainActivity : ComponentActivity() {
+    // FIXME: Sidebar render error
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,7 +32,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Scaffold {
                         AndroidWebView(
-                            url = "http://150.138.77.132:12321",
+                            url = "http://paperclub.top",
                             modifier = Modifier
                                 .fillMaxSize()
                                 .padding(it)
@@ -52,8 +53,10 @@ class MainActivity : ComponentActivity() {
         AndroidView(
             factory = { ctx ->
                 WebView(ctx).apply {
-                    settings.javaScriptEnabled = true
-                    settings.domStorageEnabled = true
+                    settings.apply {
+                        javaScriptEnabled = true
+                        domStorageEnabled = true
+                    }
                     webViewClient = object : WebViewClient() {
                         override fun doUpdateVisitedHistory(
                             view: WebView?,
